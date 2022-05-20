@@ -1,12 +1,4 @@
-/*******************************************************************
-* Original Code: http://www.electrodragon.com/w/File:Rfid-master.zip
-*
-* Version:  0.1
-* Author:   Peremptor
-********************************************************************/
 
-// You will only need the additional RFID library copied into your
-// library folder, see link above
 #include <SPI.h>
 #include <RFID.h>
 #include <LiquidCrystal.h>
@@ -66,15 +58,14 @@ void loop()
           lcd.print(rfid.serNum[2]);
           lcd.print(rfid.serNum[3]);
           lcd.print(rfid.serNum[4]);
-                                      // every number has to digits, so your display should show 10 nubmers
-          delay(10000);    // wait 10 seconds (or whatever you want if you change it)
-          // start from the beginning again
+                                      
+          delay(10000);    
           lcd.clear();                  
           lcd.setCursor(0,0);          
           lcd.print("RFID bereit");                                     
         }
     }
     
-    rfid.halt();  // close the stream
+    rfid.halt();  
 }
-// Enjoy!
+
